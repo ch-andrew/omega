@@ -1,0 +1,150 @@
+body{
+  min-height: 100vh;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (max-width: 768px) {
+  html, body {
+  overflow-x: hidden;
+  }
+
+  .desktop-view {
+    display: none;
+  }
+
+  .login-form {
+    height: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-view {
+    display: none;
+  }
+
+  .login-form {
+    height: 100%;
+  }
+
+  .login-form {
+    width: 50vmin;
+  }
+}
+
+.outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.outfit-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.montserrat-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+/* Circle Button */
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+
+.btn-size {
+  font-weight: 700;
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.footer-links {
+  text-decoration: none;
+  color: white
+}
+
+.footer-links:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.caret{
+  border-top:4px solid red;
+}
+
+.primary-link {
+  text-decoration: none;
+}
+
+/* Accordion */
+
+.accordion-button {
+  color: white;
+  background-color: black;
+  box-shadow: none;
+}
+
+.accordion-button-disabled .accordion-button{
+  color: white;
+  background-color: gray;
+  box-shadow: none;
+}
+
+
+.accordion-button:not(.collapsed) {
+  color: white;
+  background-color: black;
+  box-shadow: none;
+  
+}
+
+.accordion-button-disabled .accordion-button:not(.collapsed) {
+  color: white;
+  background-color: black;
+  box-shadow: none;
+}
+
+.accordion-item {
+  border:none;
+}
+
+.accordion-item .accordion-item-disabled{
+  border:none;
+}
+
+.h2, h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+table {
+  height: 200px;
+}
+
+.dropdown-toggle:after {
+  display: none !important; 
+}
