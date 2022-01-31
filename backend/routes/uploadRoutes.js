@@ -4,16 +4,15 @@ var multer = require('multer')
 
 const router = express.Router()
 
-const d = new Date();
-let day = d.getDate();
-let month = d.getMonth();
-let year = d.getFullYear()
-
 const storage = multer.diskStorage({
   destination(req, file, cb) {
     cb(null, 'frontend/public/images/products')
   },
   filename(req, file, cb) {
+    const d = new Date();
+    let day = d.getDate();
+    let month = d.getMonth();
+    let year = d.getFullYear()
     console.log(file);
     cb(
       null,

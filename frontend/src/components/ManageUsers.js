@@ -49,7 +49,7 @@ const ManageUsers = () => {
                 <Loader/> :
                 error ?
                 <Message variant="danger">{error}</Message> :
-                <Table striped bordered hover>
+                <Table striped bordered hover responsive>
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -64,7 +64,12 @@ const ManageUsers = () => {
 
                             return (
                                 <tr key={user._id}>
-                                    <td>{user._id}</td>
+                                    <td>
+                                        {user._id.slice(0, 12)}
+                                        <Button type="button" variant="white" onClick={() => {navigator.clipboard.writeText(user._id)}}>
+                                            <i className="fas fa-copy"></i>
+                                        </Button>
+                                    </td>
                                     <td>{user.name}</td>
                                     <td>{user.email}</td>
                                     <td>
@@ -80,7 +85,7 @@ const ManageUsers = () => {
                                                     <Button type='button' onClick={() => setModalShow(user._id)}>
                                                         <i className="fas fa-edit"></i>
                                                     </Button>
-                                                    <Button className="ms-2" variant="danger" onClick={() => deleteHandler(user._id)}>
+                                                    <Button className="ms-2" type="button" variant="danger" onClick={() => deleteHandler(user._id)}>
                                                         <i className="fas fa-trash"></i>
                                                     </Button>
                                                 </>

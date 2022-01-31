@@ -19,7 +19,7 @@ const Checkoutpage = () => {
         <Container fluid className="py-5 bg-secondary montserrat-bold">
             <Container>
                 <Row>
-                    <Col xs={8}>
+                    <Col xs={12} md={8}>
                         <div className='mb-4'>
                             <div 
                                 className="bg-black text-white" 
@@ -49,7 +49,7 @@ const Checkoutpage = () => {
                             </Collapse>
                         </div>
                     </Col>
-                    <Col xs={4}>
+                    <Col xs={12} md={4}>
                         <PlaceOrderpage/>
                     </Col>
                 </Row>

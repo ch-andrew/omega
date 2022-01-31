@@ -18,7 +18,7 @@ const productSchema = mongoose.Schema(
         },
         
         gender: {
-            type: String,
+            type: mongoose.SchemaTypes.Mixed,
             required: true
         },
 

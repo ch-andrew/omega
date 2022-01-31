@@ -35,7 +35,7 @@ const ManageProducts = () => {
     // const [refresh, setRefresh] = useState(false)
     const [productPage, setProductPage] = useState(page)
 
-    const genderList = ['Men' , 'Women']
+    const genderList = ['Men' , 'Women', 'Unisex']
 
     const [name, setName] = useState('')
     const [desc, setDesc] = useState('')
@@ -115,6 +115,7 @@ const ManageProducts = () => {
         }
         
         else {
+            console.log('bruh');
             const file = e.target.files[0]
             if(file === null){
                 return alert('No file selected')
@@ -122,6 +123,7 @@ const ManageProducts = () => {
 
             else {
                 const fileName = gender + '-' + name.split(' ').join('-') + '-' + color + file.name.substring(file.name.length - 4)
+                blob = file.slice(0, -1)
                 const imageFile = new File([blob] , fileName , {type: 'image/png'})
                 const formData = new FormData()
                 formData.append('PRD', imageFile)
@@ -147,7 +149,13 @@ const ManageProducts = () => {
     }
 
     const addProductHandler = () => {
-        dispatch(createProduct(name, desc, category, gender, price, color, colorCode, image, stock))
+        if(gender === 'Unisex'){
+            dispatch(createProduct(name, desc, category, ['Men', 'Women'], price, color, colorCode, image, stock))
+        }
+
+        else {
+            dispatch(createProduct(name, desc, category, gender, price, color, colorCode, image, stock))
+        }
     }
 
     const updateProductHandler = (id) => {

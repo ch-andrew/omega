@@ -37,7 +37,7 @@ const Adminpage = () => {
                         <h2>Admin Dashboard</h2>
                     </div>
                     <AdminDashboard/>
-                    <Col className="p-0">
+                    <Col xs={12} md={4} className="p-0">
                         <div 
                             className={steps === "manage-users" ? "bg-black text-white" : "bg-light"} 
                             style={{padding: '1rem 1.25rem',  cursor: 'pointer'}} 
@@ -46,7 +46,7 @@ const Adminpage = () => {
                             <h2>Manage Users</h2>
                         </div>
                     </Col>
-                    <Col className="p-0">  
+                    <Col xs={12} md={4} className="p-0">  
                         <div 
                             className={steps === "manage-products" ? "bg-black text-white" : "bg-light"} 
                             style={{padding: '1rem 1.25rem',  cursor: 'pointer'}} 
@@ -55,7 +55,7 @@ const Adminpage = () => {
                             <h2>Manage Products</h2>
                         </div>
                     </Col>
-                    <Col className="p-0">
+                    <Col xs={12} md={4} className="p-0">
                         <div 
                             className={steps === "manage-orders" ? "bg-black text-white" : "bg-light"} 
                             style={{padding: '1rem 1.25rem',  cursor: 'pointer'}} 

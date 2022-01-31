@@ -39,20 +39,13 @@ const Paymentpage = ({history, steps}) => {
                             checked 
                             onChange={(e) => setPaymentMethod(e.target.value)}>
                         </Form.Check>
-                        <Form.Check 
-                            type='radio' 
-                            label='Stripe' 
-                            id='stripe' 
-                            name='paymentMethod' 
-                            value='Stripe' 
-                            checked 
-                            onChange={(e) => setPaymentMethod(e.target.value)}>
-                        </Form.Check>
                     </Col>
                 </Form.Group>
-                <Button type='submit' variant='primary' onClick={submitHandler}>
-                    Continue
-                </Button>
+                <div className='d-grid gap-2'>
+                    <Button type='submit' variant='primary' size='lg' onClick={submitHandler}>
+                        Continue
+                    </Button>
+                </div>
             </Form>
         </Container>
     )

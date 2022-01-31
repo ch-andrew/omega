@@ -42,7 +42,7 @@ const Registerpage = ({location, history}) => {
 
     return (
         <Container fluid className="py-5 montserrat-bold justify-content-center bg-secondary" style={{height: '50rem'}}>
-            <Container className="py-5 bg-light" style={{width: "25rem", height: "100%"}}>
+            <Container className="py-5 bg-light justify-content-center login-form" style={{height: "100%"}}>
                 <h1 className="text-center">Register</h1>
                 <Form className="mt-5" onSubmit={submitHandler}>
                     <Form.Group className="mb-3" controlId="formBasicPassword">

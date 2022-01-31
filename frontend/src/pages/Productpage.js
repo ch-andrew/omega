@@ -98,7 +98,7 @@ const Productpage = ({ match }) => {
                             variants={variants}
                             selectedColor={selectedColor}/>
         
-                        <Col xs={6} className="py-2 bg-white">
+                        <Col xs={12} md={6} className="py-2 bg-white">
 
                             <Row>
                                 <Col>

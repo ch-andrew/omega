@@ -35,7 +35,7 @@ const ManageOrders = () => {
                 <Loader/> :
                 error ?
                 <Message variant="danger">{error}</Message> :
-                <Table striped bordered hover>
+                <Table striped bordered hover responsive className="m-0">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -52,7 +52,12 @@ const ManageOrders = () => {
 
                             return (
                                 <tr key={order._id}>
-                                    <td>{order._id}</td>
+                                    <td>
+                                        {order._id.slice(0, 12)}
+                                        <Button type="button" variant="white" onClick={() => {navigator.clipboard.writeText(order._id)}}>
+                                            <i className="fas fa-copy"></i>
+                                        </Button>
+                                    </td>
                                     <td>{order.user && order.user.name}</td>
                                     <td>{order.createdAt.substring(0, 10)}</td>
                                     <td>{`$${order.totalPrice}`}</td>

@@ -1,5 +1,6 @@
 var asyncHandler = require('express-async-handler')
 var Order = require('../models/orderModel')
+var Variant = require('../models/variantModel')
 
 
 // @desc Creat order
@@ -85,8 +86,14 @@ const getOrders = asyncHandler(async(req,res) => {
 
 const updateOrderToDelivered = asyncHandler(async(req, res) => {
     const order = await Order.findById(req.params.id)
+    console.log(order);
 
     if(order){
+        order.orderItems.forEach(async(item) => {
+            const variant = await Variant.findById(item.variantId)
+            variant.stock[item.size] -= item.qty
+            await variant.save() 
+        })
         order.isDelivered = true
         order.deliveredAt = Date.now()
 

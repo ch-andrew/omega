@@ -43,7 +43,7 @@ const Shippingpage = ({history, steps}) => {
     return (
         <Container className="bg-white p-5">
             <Row>
-                <Col>
+                <Col xs={12}>
                     <h4>Shipping address</h4>
                     <Form onSubmit={submitHandler}>
                         <Form.Group controlId='name' className="my-2">
