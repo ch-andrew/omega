@@ -22,7 +22,7 @@ const Shop = ({match}) => {
 
     useEffect(() => {
         if(match.params.category){
-            dispatch(listProducts(keyword , 16 , productPage , match.params.gender , match.params.category))
+            dispatch(listProducts(keyword , 12 , productPage , match.params.gender , match.params.category))
         }
 
         else {
