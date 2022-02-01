@@ -97,9 +97,6 @@ export const createVariant = (id, color, colorCodes, image, stock) => async (dis
     try {
         dispatch({type: 'VARIANT_CREATE_REQUEST'})
 
-        console.log(id);
-        console.log(stock);
-
         const { userLogin : { userInfo } } = getState()
 
         const variant = {

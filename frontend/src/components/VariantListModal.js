@@ -81,16 +81,13 @@ const VariantListModal = (props) => {
         }
 
         const getSignedRequest = async (file) => {
-            console.log(file);
             const { data } =  await axios.get(`/api/s3/sign-s3?file-name=images/products/${file.name}&file-type=${file.type}`)
-            console.log(data);
             uploadFile(file, data.signedRequest, data.url)
         }
         
         if(process.env.NODE_ENV === 'production'){
             const file = e.target.files[0]
             const fileName = 'PRD-' + product.gender + '-' + product.name.split(' ').join('-') + '-' + color + '-' + day + (month + 1) + year + file.name.substring(file.name.length - 4)
-            console.log(file);
             var blob = file.slice(0, -1)
             const imageFile = new File([blob] , fileName , {type: 'image/png'})
             console.log();
@@ -104,7 +101,6 @@ const VariantListModal = (props) => {
             const imageFile = new File([blob] , fileName , {type: 'image/png'})
             const formData = new FormData()
             formData.append('PRD', imageFile)
-            console.log(file);
             setUploading(true)
             
             try {

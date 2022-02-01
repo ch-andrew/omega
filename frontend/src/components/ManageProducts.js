@@ -91,9 +91,7 @@ const ManageProducts = () => {
         }
 
         const getSignedRequest = async (file) => {
-            console.log(file);
             const { data } =  await axios.get(`/api/s3/sign-s3?file-name=images/products/${file.name}&file-type=${file.type}`)
-            console.log(data);
             uploadFile(file, data.signedRequest, data.url)
         }
         
@@ -105,7 +103,6 @@ const ManageProducts = () => {
 
             else {
                 const fileName = 'PRD-' + gender + '-' + name.split(' ').join('-') + '-' + color + '-' + day + (month + 1) + year + file.name.substring(file.name.length - 4)
-                console.log(file);
                 var blob = file.slice(0, -1)
                 const imageFile = new File([blob] , fileName , {type: 'image/png'})
                 setUploading(true)
@@ -140,7 +137,6 @@ const ManageProducts = () => {
                     setImage(data)
                     setUploading(false)
                 } catch (error) {
-                    console.log('not working');
                     console.error(error)
                     setUploading(false)
                 }
@@ -450,7 +446,7 @@ const ManageProducts = () => {
                         </Row>
                         {
                             name && desc && category && gender && price && color && colorCode && image && stock ?
-                            <Button type="button" variant="primary" onClick={addProductHandler}>
+                            <Button type="button" variant="primary" className="mt-4" onClick={addProductHandler}>
                                 Add new product
                             </Button>
                             :
