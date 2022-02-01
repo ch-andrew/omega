@@ -199,6 +199,10 @@ const Orderpage = ({ match }) => {
                                         {loadingPay && <Loader/>}
                                         {!sdkReady ? <Loader/> : (
                                             <PayPalButton 
+                                            style={{
+                                                layout: 'horizontal',
+                                                tagline: 'false'
+                                            }}
                                             amount={order.totalPrice} 
                                             onSuccess={successPaymentHandler}></PayPalButton>
                                             )}
