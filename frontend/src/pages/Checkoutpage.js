@@ -50,7 +50,7 @@ const Checkoutpage = () => {
                         </div>
                     </Col>
                     <Col xs={12} md={4}>
-                        <PlaceOrderpage/>
+                        <PlaceOrderpage steps={steps}/>
                     </Col>
                 </Row>
             </Container>

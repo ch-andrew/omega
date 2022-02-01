@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import { createOrder } from '../actions/orderActions'
 
-const PlaceOrderpage = () => {
+const PlaceOrderpage = ({steps}) => {
     const dispatch = useDispatch()
     let history = useHistory()
 
@@ -93,14 +93,26 @@ const PlaceOrderpage = () => {
                 }
 
                 <ListGroup.Item className="d-grid gap-2">
-                    <Button 
-                        type="button" 
-                        className="btn-block" 
-                        size="lg"
-                        disabled={cart.cartItems.length === 0} 
-                        onClick={placeOrderHandler}>
-                        Place Order
-                    </Button>
+                    {
+                        steps === 'placeorder' ?
+                        <Button 
+                            type="button" 
+                            className="btn-block" 
+                            size="lg"
+                            disabled={cart.cartItems.length === 0} 
+                            onClick={placeOrderHandler}>
+                            Place Order
+                        </Button>
+                        :
+                        <Button 
+                            type="button" 
+                            className="btn-block" 
+                            size="lg"
+                            disabled>
+                            Place Order
+                        </Button>
+
+                    }
                 </ListGroup.Item>
             </ListGroup>
 
