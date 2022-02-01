@@ -122,7 +122,7 @@ const Shop = ({match}) => {
                     <h2>{match.params.gender[0].toUpperCase() + match.params.gender.slice(1)}'s {renderFilter()}</h2>
                     <Row className="text-center">
                         {allProducts ? productList : null}
-                        <Paginate pages={pages} page={page} isAdmin={true} clicked={setProductPage}/>
+                        <Paginate pages={pages} page={page} clicked={setProductPage}/>
                     </Row>
                 </div>
                 }

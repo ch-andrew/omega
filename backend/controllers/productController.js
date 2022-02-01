@@ -34,26 +34,28 @@ const getProducts = asyncHandler(async(req, res) => {
     categories.push('all')
 
     categories.sort()
-
-    const count = await Product.countDocuments({...keyword})
-
+    
     if(gender && category !== 'all'){
+        const count = await Product.countDocuments({...keyword, gender: gender, category: category})
         const products = await Product.find({ ...keyword, gender: gender, category: category}).limit(pageSize).skip(pageSize * (page - 1))
         res.json({categories, products, page, pages: Math.ceil(count / pageSize)})
     }
 
     else if(gender && category === 'all'){
         const category = ''
+        const count = await Product.countDocuments({...keyword, gender: gender, ...category})
         const products = await Product.find({ ...keyword, gender: gender, ...category}).limit(pageSize).skip(pageSize * (page - 1))
         res.json({categories, products, page, pages: Math.ceil(count / pageSize)})
     }
 
     else if(gender && !category){
+        const count = await Product.countDocuments({...keyword, gender: gender, ...category})
         const products = await Product.find({ ...keyword, gender: gender, ...category}).limit(pageSize).skip(pageSize * (page - 1))
         res.json({categories, products, page, pages: Math.ceil(count / pageSize)})
     }
 
     else {
+        const count = await Product.countDocuments({...keyword, ...gender, ...category})
         const products = await Product.find({ ...keyword, ...gender, ...category}).limit(pageSize).skip(pageSize * (page - 1))
         res.json({categories, products, page, pages: Math.ceil(count / pageSize)})
     }
