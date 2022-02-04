@@ -65,12 +65,10 @@ Omega is a fake clothing brand with medium-sized office based in Indonesia. The 
 * [Node.js](https://nodejs.org/)
 * [Bootstrap](https://getbootstrap.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Mobile Responsive
+- [x] Mobile Responsive
 - [ ] Discount Code
 - [ ] Regional Pricing
     <!-- - [ ] Nested Feature -->
@@ -84,8 +82,6 @@ Email: andrew.ch9899@gmail.com
 Whatsapp: +62812-9040-0773
 
 Project Link: https://github.com/ch-andrew/omega
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
