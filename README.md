@@ -45,7 +45,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://ch-omega.herokuapp.com/)
+[Live demo on Heroku](https://ch-omega.herokuapp.com/)
 
 Omega is a fake clothing brand with medium-sized office based in Indonesia. The company could ship their products to Singapore and Malaysia. This project is to create an eCommerce website for the company and a platform for the employees to create/manage content within the website. Omega is developed by using MERN(MongoDB, Express, React.js, Node.js) stack and designed with React-Bootstrap.
 
