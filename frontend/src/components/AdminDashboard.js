@@ -22,6 +22,10 @@ const AdminDashboard = () => {
         if(!userInfo){
             history.push('/')
         }
+
+        else {
+            console.log('WHY');
+        }
     }, [history, userInfo, todaySaleOrders])
     
 
@@ -35,10 +39,10 @@ const AdminDashboard = () => {
                     <Container>
                         <Row>
                             <Col>
-                                <h4 style={{fontWeight: '700'}}>Welcome, {userInfo.name}</h4>
+                                <h4 style={{fontWeight: '700'}}>Welcome, {userInfo && userInfo.name}</h4>
                             </Col>
                             <Col className="text-end">
-                                <h5 style={{fontWeight: '700'}}>{userInfo.email}</h5>
+                                <h5 style={{fontWeight: '700'}}>{userInfo && userInfo.email}</h5>
                             </Col>
                         </Row>
                         <h2>Statistics</h2>

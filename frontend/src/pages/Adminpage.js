@@ -25,8 +25,6 @@ const Adminpage = () => {
             console.log(' no user Info');
             history.push('/')
         }
-
-
     }, [userInfo, history])
 
     return (    
