@@ -13,7 +13,7 @@
     <a href="https://github.com/ch-andrew/omega"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ch-andrew/omega">View Demo</a>
+    <a href="https://ch-omega.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/ch-andrew/omega/issues">Report Bug</a>
     ·
@@ -45,7 +45,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[Live demo on Heroku](https://ch-omega.herokuapp.com/)
+[Live demo on Heroku](https://ch-omega.herokuapp.com/) (Load times might be slow due to using Heroku free Dynos)
 
 Omega is a fake clothing brand with medium-sized office based in Indonesia. The company could ship their products to Singapore and Malaysia. This project is to create an eCommerce website for the company and a platform for the employees to create/manage content within the website. Omega is developed by using MERN(MongoDB, Express, React.js, Node.js) stack and designed with React-Bootstrap.
 
@@ -64,6 +64,22 @@ Omega is a fake clothing brand with medium-sized office based in Indonesia. The 
 * [React.js](https://reactjs.org/)
 * [Node.js](https://nodejs.org/)
 * [Bootstrap](https://getbootstrap.com)
+
+<!-- ROADMAP -->
+## Features
+- Authorization (Register / Login)
+- Account Verification
+- Display Products
+- Product Sections (New Arrivals, Men, Women)
+- Search products
+- Pagination
+- Customer Features :
+  - My Account (Customer Details)
+  - Add to cart
+  - Checkout / Transactions
+- Admin Features :
+  - Manage Products
+  - Completing Transactions
 
 <!-- ROADMAP -->
 ## Roadmap
